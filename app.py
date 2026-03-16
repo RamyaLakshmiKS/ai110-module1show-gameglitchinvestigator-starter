@@ -3,9 +3,9 @@ import streamlit as st
 
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
-        return 1, 20
+        return 1, 100
     if difficulty == "Medium":
-        return 1, 50
+        return 1, 100
     if difficulty == "Hard":
         return 1, 100
     return 1, 100
@@ -78,8 +78,8 @@ difficulty = st.sidebar.selectbox(
 )
 
 attempt_limit_map = {
-    "Easy": 6,
-    "Medium": 8,
+    "Easy": 10,
+    "Medium": 10,
     "Hard": 10,
 }
 attempt_limit = attempt_limit_map[difficulty]
